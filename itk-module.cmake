@@ -12,6 +12,7 @@ itk_module(PrincipalComponentsAnalysis
     ITKIOMesh
     ITKIOMRC
     ITKIOStimulate
+    ITKTestKernel
     SCIFIO
   EXCLUDE_FROM_DEFAULT 
   DESCRIPTION
