@@ -1,29 +1,16 @@
-SET(CXX_TEST_PATH ${EXECUTABLE_OUTPUT_PATH})
-SET(TEST_DATA_ROOT ${CMAKE_SOURCE_DIR}/Data)
-SET(TEMP ${CMAKE_BINARY_DIR}/Testing/Temporary)
+itk_module_test()
 
+SET(kit PrincipalComponentsAnalysis)
+SET(${kit}Tests
+  itkVectorKernelPCATest.cxx
+  )
 
-#######################
-#######################
-#
-#  Define Executables
-#
-#######################
-#######################
+SET(TEST_DATA_ROOT ${${kit}_SOURCE_DIR}/Data)
 
-ADD_EXECUTABLE(itkVectorKernelPCATest itkVectorKernelPCATest.cxx )
-TARGET_LINK_LIBRARIES(itkVectorKernelPCATest ${ITK_LIBRARIES})
+CreateTestDriver(${kit} "${${kit}-Test_LIBRARIES}" "${${kit}Tests}")
 
-###################
-###################
-#
-#  Define Tests
-#
-###################
-###################
-
-ADD_TEST(itkVectorKernelPCATest
-  ${CXX_TEST_PATH}/itkVectorKernelPCATest
+itk_add_test(NAME itkVectorKernelPCATest
+  COMMAND ${kit}TestDriver itkVectorKernelPCATest
   ${TEST_DATA_ROOT}/PCATestSurface.vtk
   ${TEST_DATA_ROOT}/PCATestSurface_alpha0_01.vtk
   ${TEST_DATA_ROOT}/PCATestSurface_alpha0_02.vtk
