@@ -30,7 +30,7 @@ int showUsage(const char* programName)
   return EXIT_FAILURE;
 }
 
-int main( int argc, char *argv[] )
+int itkVectorKernelPCATest(int argc, char *argv[])
 {
 #define MIN_ARG_COUNT 6
 #define FIRST_VECTOR_FIELD_ARG 2
