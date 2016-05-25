@@ -6,6 +6,7 @@ itk_module(PrincipalComponentsAnalysis
     ITKCommon
   TEST_DEPENDS
     ITKIOMesh
+    ITKMesh
     ITKTestKernel
   EXCLUDE_FROM_DEFAULT 
   DESCRIPTION
