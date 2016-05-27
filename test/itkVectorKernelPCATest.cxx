@@ -43,9 +43,7 @@ int itkVectorKernelPCATest(int argc, char *argv[])
   typedef double                    PointDataType;
   typedef itk::Array<PointDataType> PointDataVectorType;
   typedef PointDataVectorType       PixelType;
-  typedef double                    DDataType;
   typedef double                    CoordRep;
-  typedef double                    InterpRep;
   const   unsigned int              Dimension = 3;
 
 //    typedef float              PCAResultsType;
